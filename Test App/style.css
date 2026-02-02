@@ -1,0 +1,40 @@
+:root {
+    --bg: #050505; --card: #121212; --accent: #ff3e3e; --text: #fff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: var(--bg); color: var(--text); font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.6; }
+
+/* Navbar */
+.navbar { position: fixed; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1rem 8%; background: rgba(0,0,0,0.8); backdrop-filter: blur(15px); z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.logo-svg { height: 45px; }
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-item { color: rgba(255,255,255,0.7); text-decoration: none; font-weight: 600; position: relative; }
+.nav-item::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--accent); transition: 0.3s; }
+.nav-item:hover::after { width: 100%; }
+
+/* Hero */
+.hero { height: 100vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920'); background-size: cover; display: flex; align-items: center; padding: 0 8%; }
+.hero-content h1 { font-size: 5rem; line-height: 1.1; margin: 1.5rem 0; }
+.gradient-text { background: linear-gradient(45deg, #fff, var(--accent)); -webkit-background-clip: text; background-clip: text; -webkit-fill-color: transparent; }
+
+/* Inventory Controls */
+.inventory-controls { display: flex; justify-content: space-between; margin-bottom: 3rem; gap: 1rem; flex-wrap: wrap; }
+#carSearch, select { background: var(--card); border: 1px solid #333; color: #fff; padding: 0.8rem; border-radius: 8px; width: 300px; }
+
+/* Grid & Cards */
+.container { padding: 100px 8%; }
+.car-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+.car-card { background: var(--card); border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); transition: 0.4s; }
+.car-card:hover { transform: translateY(-10px); border-color: var(--accent); }
+.car-img { height: 220px; background-size: cover; background-position: center; }
+.car-info { padding: 1.5rem; }
+.price-tag { font-size: 1.5rem; font-weight: 800; color: var(--accent); margin: 0.5rem 0; }
+
+/* Finance Calc */
+.calculator-container { display: grid; grid-template-columns: 1fr 1fr; background: var(--card); padding: 3rem; border-radius: 20px; gap: 2rem; }
+.emi-display { font-size: 3.5rem; font-weight: 800; color: var(--accent); margin-bottom: 2rem; }
+.input-group { margin-bottom: 1rem; }
+
+/* Reveal Animation */
+.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+.reveal.active { opacity: 1; transform: translateY(0); }
