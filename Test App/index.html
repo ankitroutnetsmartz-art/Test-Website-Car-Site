@@ -1,101 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APEX MOTORS | Advanced Performance</title>
+    <title>DIORBILLION | The Zenith of Velocity</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <div class="logo-container">
-            <svg class="logo-svg" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
-                <path d="M10 30 L40 5 L70 30 Z" fill="none" stroke="#ff3e3e" stroke-width="3" />
-                <path d="M20 30 L50 10 L80 30" fill="none" stroke="white" stroke-width="2" opacity="0.4" />
-                <text x="45" y="35" font-family="Arial" font-weight="800" font-size="12" fill="white" letter-spacing="2">APEX</text>
-            </svg>
-        </div>
+    <nav>
+        <a href="#" class="logo">DIORBILLION <span>AUTOMOTIVE</span></a>
         <ul class="nav-links">
-            <li><a href="#home" class="nav-item">Home</a></li>
-            <li><a href="#inventory" class="nav-item">Inventory</a></li>
-            <li><a href="#finance" class="nav-item">Finance</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#fleet">Fleet</a></li>
+            <li><a href="#finance">Concierge</a></li>
+            <li><a href="#contact">Inquiry</a></li>
         </ul>
-        <button class="btn-cta">Book Test Drive</button>
+        <a href="#finance" class="nav-cta">Secure Yours</a>
     </nav>
 
-    <header id="home" class="hero">
-        <div class="hero-content reveal">
-            <span class="badge">Innovation 2026</span>
-            <h1>The Future of <span class="gradient-text">Performance</span></h1>
-            <p>Experience precision engineering and unmatched luxury.</p>
-            <div class="hero-btns">
-                <a href="#inventory" class="btn-primary">Explore Fleet</a>
-                <a href="#finance" class="btn-secondary">Estimate Payment</a>
+    <header class="hero" id="hero">
+        <div class="hero-bg">
+            <video autoplay muted loop playsinline>
+                <source
+                    src="https://assets.mixkit.co/videos/preview/mixkit-black-luxury-car-driving-in-a-dark-parking-lot-34505-large.mp4"
+                    type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content reveal">
+                <span class="hero-badge">Beyond Luxury</span>
+                <h1><span>The Zenith Of</span> Velocity</h1>
+                <p>Welcome to the inner circle. DIORBILLION represents the absolute pinnacle of automotive engineering
+                    and prestige.</p>
+                <div class="hero-actions">
+                    <a href="#fleet" class="nav-cta">View Collection</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="inventory" class="container">
-        <div class="section-header reveal">
-            <h2>Current Fleet</h2>
-            <div class="divider"></div>
-        </div>
-
-        <div class="inventory-controls reveal">
-            <input type="text" id="carSearch" placeholder="Search models...">
-            <div class="filter-group">
-                <select id="fuelFilter">
-                    <option value="all">All Power</option>
-                    <option value="electric">Electric</option>
-                    <option value="gas">Gasoline</option>
-                </select>
-                <select id="priceSort">
-                    <option value="default">Sort Price</option>
-                    <option value="low">Low to High</option>
-                    <option value="high">High to Low</option>
-                </select>
+    <section id="fleet">
+        <div class="container">
+            <div class="section-title reveal">
+                <p>Our Masterpieces</p>
+                <h2>The Global Fleet</h2>
             </div>
-        </div>
 
-        <div class="car-grid" id="car-grid">
-            </div>
-    </section>
-
-    <section id="finance" class="container reveal">
-        <div class="calculator-container">
-            <div class="calc-inputs">
-                <h3>Finance Calculator</h3>
-                <div class="input-group">
-                    <label>Vehicle Price ($)</label>
-                    <input type="number" id="car-price" value="75000">
-                </div>
-                <div class="input-group">
-                    <label>Down Payment ($)</label>
-                    <input type="number" id="down-payment" value="15000">
-                </div>
-                <div class="input-group">
-                    <label>Interest Rate (<span id="rate-val">4.5%</span>)</label>
-                    <input type="range" id="interest-rate" min="1" max="15" step="0.1" value="4.5">
-                </div>
-                <div class="input-group">
-                    <label>Loan Term</label>
-                    <select id="loan-term">
-                        <option value="36">36 Months</option>
-                        <option value="48" selected>48 Months</option>
-                        <option value="60">60 Months</option>
-                    </select>
-                </div>
-            </div>
-            <div class="calc-result">
-                <h4>Monthly Payment</h4>
-                <div class="emi-display">$<span id="emi-amount">0.00</span></div>
-                <button class="btn-primary">Pre-Approve Now</button>
+            <div class="fleet-grid" id="car-grid">
+                <!-- Dynamically Rendered -->
             </div>
         </div>
     </section>
+
+    <section id="finance">
+        <div class="container">
+            <div class="section-title reveal">
+                <p>Private Acquisition</p>
+                <h2>Acquisition Concierge</h2>
+            </div>
+
+            <div class="concierge-wrap reveal">
+                <div class="concierge-form">
+                    <div class="input-block">
+                        <label>Select Masterpiece</label>
+                        <select id="car-select">
+                            <!-- Populated by JS -->
+                        </select>
+                    </div>
+                    <div class="input-block">
+                        <label>Base Investment ($)</label>
+                        <input type="number" id="car-price" value="250000">
+                    </div>
+                    <div class="input-block">
+                        <label>Initial Deposit ($)</label>
+                        <input type="number" id="down-payment" value="50000">
+                    </div>
+                    <div class="input-block">
+                        <label>Preferred Tenure</label>
+                        <select id="loan-term">
+                            <option value="12">12 Months</option>
+                            <option value="24">24 Months</option>
+                            <option value="36" selected>36 Months</option>
+                            <option value="48">48 Months</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="concierge-result">
+                    <p class="emi-label">Monthly Allocation</p>
+                    <div class="emi-amount">$<span id="emi-display">0.00</span></div>
+                    <button class="nav-cta"
+                        style="margin-top: 40px; width: 80%; border: none; cursor: pointer;">Initiate
+                        Acquisition</button>
+                    <p
+                        style="color: rgba(0,0,0,0.5); font-size: 0.7rem; margin-top: 20px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;">
+                        0% Interest for Tier 1 Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-wrap">
+                <a href="#" class="logo">DIORBILLION</a>
+                <p class="copyright">© 2026 DIORBILLION AUTOMOTIVE. ALL RIGHTS RESERVED.</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
