@@ -67,6 +67,11 @@ class App {
             if (typeof initContactForm === 'function') initContactForm();
             if (typeof initMobileNav === 'function') initMobileNav();
 
+            // New: parallax, nav scroll, and testimonial carousel
+            if (typeof initParallax === 'function') initParallax();
+            if (typeof initNavScroll === 'function') initNavScroll();
+            if (typeof initTestimonialCarousel === 'function') initTestimonialCarousel();
+
             // Populate Select dropdown
             this.initSelectDropdown();
 

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DIORBILLION Automotive — the absolute pinnacle of automotive engineering and prestige. Explore our elite collection of electric and gasoline hypercars and luxury vehicles.">
     <title>DIORBILLION | The Zenith of Velocity</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -97,38 +98,57 @@
                 <h2>Distinguished Patrons</h2>
             </div>
 
-            <div class="testimonials-grid">
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-content">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text">"The acquisition process was seamless. The Phantom Seraph exceeds every expectation—pure automotive excellence."</p>
-                        <div class="testimonial-author">
-                            <span class="author-name">Alexander Sterling</span>
-                            <span class="author-title">CEO, Sterling Capital</span>
+            <div class="testimonials-carousel" id="testimonials-carousel">
+                <div class="testimonials-track" id="testimonials-track">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"The acquisition process was seamless. The Phantom Seraph exceeds every expectation—pure automotive excellence that commands every room it enters."</p>
+                            <div class="testimonial-author">
+                                <span class="author-name">Alexander Sterling</span>
+                                <span class="author-title">CEO, Sterling Capital</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"DIORBILLION doesn't just sell cars; they curate experiences. My Nebula X-GT is a masterpiece of engineering that redefines what a supercar can be."</p>
+                            <div class="testimonial-author">
+                                <span class="author-name">Victoria Chen</span>
+                                <span class="author-title">Tech Entrepreneur</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"The concierge service is unparalleled. They understood my vision and delivered beyond my wildest dreams. DIORBILLION is in a class entirely of its own."</p>
+                            <div class="testimonial-author">
+                                <span class="author-name">Marcus Webb</span>
+                                <span class="author-title">Real Estate Mogul</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="testimonial-stars">★★★★★</div>
+                            <p class="testimonial-text">"Owning a DIORBILLION vehicle is a statement. The craftsmanship, performance, and personal attention to detail is something you simply cannot find anywhere else."</p>
+                            <div class="testimonial-author">
+                                <span class="author-name">Isabelle Fontaine</span>
+                                <span class="author-title">Art Curator, Paris</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-content">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text">"DIORBILLION doesn't just sell cars; they curate experiences. My Nebula X-GT is a masterpiece of engineering."</p>
-                        <div class="testimonial-author">
-                            <span class="author-name">Victoria Chen</span>
-                            <span class="author-title">Tech Entrepreneur</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card reveal">
-                    <div class="testimonial-content">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <p class="testimonial-text">"The concierge service is unparalleled. They understood my vision and delivered beyond my wildest dreams."</p>
-                        <div class="testimonial-author">
-                            <span class="author-name">Marcus Webb</span>
-                            <span class="author-title">Real Estate Mogul</span>
-                        </div>
-                    </div>
+                <div class="carousel-nav">
+                    <button class="carousel-btn" id="carousel-prev" aria-label="Previous testimonial">&#8592;</button>
+                    <div class="carousel-dots" id="carousel-dots"></div>
+                    <button class="carousel-btn" id="carousel-next" aria-label="Next testimonial">&#8594;</button>
                 </div>
             </div>
         </div>
@@ -150,12 +170,18 @@
                         </select>
                     </div>
                     <div class="input-block">
-                        <label>Base Investment ($)</label>
-                        <input type="number" id="car-price" value="250000">
+                        <label>
+                            <span>Base Investment</span>
+                            <span class="slider-value" id="price-display">$250,000</span>
+                        </label>
+                        <input type="range" id="car-price" min="80000" max="5000000" step="5000" value="250000" aria-label="Base investment amount">
                     </div>
                     <div class="input-block">
-                        <label>Initial Deposit ($)</label>
-                        <input type="number" id="down-payment" value="50000">
+                        <label>
+                            <span>Initial Deposit</span>
+                            <span class="slider-value" id="deposit-display">$50,000</span>
+                        </label>
+                        <input type="range" id="down-payment" min="0" max="2000000" step="5000" value="50000" aria-label="Initial deposit amount">
                     </div>
                     <div class="input-block">
                         <label>Preferred Tenure</label>
@@ -164,6 +190,7 @@
                             <option value="24">24 Months</option>
                             <option value="36" selected>36 Months</option>
                             <option value="48">48 Months</option>
+                            <option value="60">60 Months</option>
                         </select>
                     </div>
                 </div>
